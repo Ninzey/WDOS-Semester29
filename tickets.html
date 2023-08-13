@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tickets.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book_Tickets_Page</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" href="./logo.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <section>
+        <!-- Background image -->
+
+        <div class="backimg">
+
+            <!-- Navigation Bar -->
+
+            <nav id="nav">
+                <label class="logo">Book Tickets</label>
+                <ul>
+                    <li><a href="./Home.html">Home</a></li>
+                    <li><a href="./Turtle categories.html">Turtle Categories</a></li>
+                    <li><a href="./hikkaduwa turtle hatchery.html">Hikkaduwa Turtle Hatchery</a></li>
+                    <li><a href="./Threats to turtle.html">Threats</a></li>
+                    <li>
+                        <a href="#">Other Turtle Hatcheries</a>
+                        <ul>
+                            <li><a href="./kosgoda turtle hatchery.html">Kosgoda Turtle Hatchery</a></li>
+                            <li><a href="./bentota turtle hatchery.html">Bentota Turtle Hatchery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./purchase and donatepage.html">Donations</a></li>
+                </ul>
+            </nav>
+
+            <!-- Calendar -->
+
+            <div class="clndr">
+                <label for="date" class="date">When are you comming :</label>
+                <input type="date" class="calendar" id="date" onchange="displayDate()">
+            </div>
+
+            <!-- Number of guests -->
+
+            <label for="date" class="guestsnum">Select the guests number :</label>
+
+            <div class="guestssec">
+                <div class="box">
+                    <label for="name">SL Adult :</label>
+                    <div class="dec button">-</div>
+                    <input type="text" name="qty" id="sadult" value="0" class="input-field">
+                    <div class="inc button">+</div>
+                </div>
+    
+                <div class="box">
+                    <label for="name">SL Child :</label>
+                    <div class="dec button">-</div>
+                    <input type="text" name="qty" id="schild" value="0" class="input-field">
+                    <div class="inc button">+</div>
+                </div>
+    
+                <div class="box">
+                    <label for="name">Foreign Adult :</label>
+                    <div class="dec button">-</div>
+                    <input type="text" name="qty" id="fadult" value="0" class="input-field">
+                    <div class="inc button">+</div>
+                </div>
+    
+                <div class="box">
+                    <label for="name">Foreign Child :</label>
+                    <div class="dec button">-</div>
+                    <input type="text" name="qty" id="fchild" value="0" class="input-field">
+                    <div class="inc button">+</div>
+                </div>
+    
+                <div class="box">
+                    <label for="name">Infant :</label>
+                    <div class="dec button">-</div>
+                    <input type="text" name="qty" id="sfinfant" value="0" class="input-field">
+                    <div class="inc button">+</div>
+                </div>
+            </div>
+
+            <!-- Time frames -->
+
+            <label for="Time frame" class="timelabel">Select the time duration :</label>
+            
+            <div class="timebody">
+                <div class="select-container">
+                    <select id="timedue" class="select-box" onclick="selectfun()">
+                        <option value="">A.M. - P.M.</option>
+                        <option value="07.00 a.m. - 08.00 a.m.">07.00 a.m. - 08.00 a.m.</option>
+                        <option value="08.00 a.m. - 09.00 a.m.">08.00 a.m. - 09.00 a.m.</option>
+                        <option value="09.00 a.m. - 10.00 a.m.">09.00 a.m. - 10.00 a.m.</option>
+                        <option value="10.00 a.m. - 11.00 a.m. (Peak)">10.00 a.m. - 11.00 a.m. (Peak)</option>
+                        <option value="11.00 a.m. - 12.00 p.m. (Peak)">11.00 a.m. - 12.00 p.m. (Peak)</option>
+                        <option value="12.00 p.m. - 01.00 p.m. (Peak)">12.00 p.m. - 01.00 p.m. (Peak)</option>
+                        <option value="01.00 p.m. - 02.00 p.m.">01.00 p.m. - 02.00 p.m.</option>
+                        <option value="02.00 p.m. - 03.00 p.m.">02.00 p.m. - 03.00 p.m.</option>
+                        <option value="03.00 p.m. - 04.00 p.m. (Peak)">03.00 p.m. - 04.00 p.m. (Peak)</option>
+                        <option value="04.00 p.m. - 05.00 p.m. (Peak)">04.00 p.m. - 05.00 p.m. (Peak)</option>
+                        <option value="05.00 p.m. - 06.00 p.m. (Peak)">05.00 p.m. - 06.00 p.m. (Peak)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Price Table -->
+
+            <label for="Price table" class="pricetbl">Price table :</label>
+
+            <table class="table1"> 
+
+                <tr class="tr1">
+                    <td class="td1">Sri Lankan Adult</td>
+                    <td class="td1">Normal</td>
+                    <td class="td1">$ 4</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td2">Sri Lankan Child</td>
+                    <td class="td2">Normal</td>
+                    <td class="td2">$ 2</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td1">Foreign Adult</td>
+                    <td class="td1">Normal</td>
+                    <td class="td1">$ 10</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td2">Foreign CHild</td>
+                    <td class="td2">Normal</td>
+                    <td class="td2">$ 5</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td1">Sri Lankan Adult</td>
+                    <td class="td1">Peak</td>
+                    <td class="td1">$ 6</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td2">Sri Lankan Child</td>
+                    <td class="td2">Peak</td>
+                    <td class="td2">$ 3</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td1">Foreign Adult</td>
+                    <td class="td1">Peak</td>
+                    <td class="td1">$ 13</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td2">Foreign CHild</td>
+                    <td class="td2">Peak</td>
+                    <td class="td2">$ 8</td>
+                </tr>
+        
+                <tr class="tr1">
+                    <td class="td1">Sri Lankan / Foreign Infants</td>
+                    <td class="td1">Normal / Peak</td>
+                    <td class="td1">Free</td>
+                </tr>
+        
+            </table>
+
+            <!-- Summary Table -->
+
+            <label for="Summary table" class="sumrytbl">Your Order Summary</label>
+
+            <table class="table2">
+
+                <tr class="tr2">
+                    <td class="td12">Date</td>
+                    <td id="tdate" class="td12"> >>> </td>
+                    <td class="td12" id="tdate123"></td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td class="td12">Time</td>
+                    <td id="ttime" class="td12"> >>> </td>
+                    <td id="ttime1" class="td12"></td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td class="td22">Charges</td>
+                    <td class="td22">No. of Guests</td>
+                    <td class="td22">Tickets</td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td id="tsadult" class="td12">Sri Lankan Adults</td>
+                    <td id="tsadultv1" class="td12"></td>
+                    <td id="tsadultv" class="td12"></td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td id="tschild" class="td12">Sri Lankan Childs</td>
+                    <td id="tschildv1" class="td12"></td>
+                    <td id="tschildv" class="td12"></td>
+                </tr>
+        
+                <tr class="tr2">
+        
+                    <td id="tfadult" class="td12">Foreign Adults</td>
+                    <td id="tfadultv1" class="td12"></td>
+                    <td id="tfadultv" class="td12"></td>
+        
+                </tr>
+        
+                <tr class="tr2">
+                    <td id="tfchild" class="td12">Foreign Childs</td>
+                    <td id="tfchildv1" class="td12"></td>
+                    <td id="tfchildv" class="td12"></td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td class="td12">Sri lankan / Foreign Infants</td>
+                    <td id="tsfinfantv1" class="td12"></td>
+                    <td id="tsadultv" class="td12">Free</td>
+                </tr>
+        
+                <tr class="tr2">
+                    <td class="td22">Total Payable</td>
+                    <td id="tsum" class="td22"> = </td>
+                    <td id="tsumsum" class="td22"></td>
+                </tr>
+        
+            </table>
+
+            <!-- Explore Button -->
+
+            <div class="button">
+                <a href="./details.html"><button id="lastbut" class="exbut">Continue with purchase</button></a>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!--Footer-->
+
+    <section id="sec06" class="footer">
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><p class="footerp">Our main responsibility is to monitor and try to conserve the endangered turtles. We are using advanced remote technologies such as satallite waves, radio waves to detect them.<br><br>Therefore, by learning more about sea turtles through this website, we hope to strengthen the world fund to protect the global turtle population.<br><br></p></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Our Goals</h4>
+                        <ul>
+                            <li><p class="footerp">As the <b>Department of Coast Conservation and Coastal Resource Management</b>, protecting sea turtles that come to our beaches is one of our main priorities.<br><br>Treating injured turtles and breeding them to maintain the turtle population are also some of our goals.<br><br></p></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Reference List</h4>
+                        <ul>
+                            <li><a href="https://www.coastal.gov.lk/index.php?lang=en">www.coastal.gov.lk</a></li>
+                            <li><a href="https://www.tripadvisor.com/Attraction_Review-g304134-d3183957-Reviews-Turtle_Hatchery_Hikkaduwa-Hikkaduwa_Galle_District_Southern_Province.html">www.tripadvisor.com</a></li>
+                            <li><a href="https://www.turtle-foundation.org/">www.turtle-foundation.org</a></li>
+                            <li><a href="https://www.globalgiving.org/projects/rescue-30-000-sea-turtles-in-guatemala/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEK8If64euW0TQtSs4t8_hKJhyGs8nmminDTahn89cbG9X3t8h50e8hoCqz4QAvD_BwE">www.globalgiving.org</a></li>
+                            <li><a href="https://www.seacology.org/2020/04/seacology-supports-sea-turtles-race-for-survival/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEFvtMmggdxUtaEmP2aRMetWGtpcG24ldNiPMo91m-RzNGhGC0_8BtRoCsg0QAvD_BwE">www.seacology.org</a></li>
+                            <li><a href="https://unfoundation.org/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEF151UBHJHyZGZ9wNaL6o7oZvsgpd10J9r6NgPtTdeTwU7-GC323shoCm8YQAvD_BwE">www.unfoundation.org</a></li>
+                            <li><a href="https://www.fisheries.noaa.gov/sea-turtles">www.fisheries.noaa.gov</a></li>
+                        </ul>
+                    </div>
+                    <br><br>
+                    <div class="footer-col">
+                        <h4>Social Media</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/turtleactiongroupseychelles/"><i class="fab fa-facebook-f"></i><div class="sldiv">#ProtectTurtles</div></a>
+                            <a href="https://twitter.com/OceanTurtles"><i class="fab fa-twitter"></i><div class="sldiv">#OceanTurtles</div></a>
+                            <a href="https://www.instagram.com/turtle.foundation/?hl=en"><i class="fab fa-instagram"></i><div class="sldiv">#turtle.foundation</div></a>
+                            <a href="https://lk.linkedin.com/posts/lisha-singh-3627273a_sri-lankan-community-protects-baby-sea-turtles-twitter-activity-6824118384750395394-tMYp"><i class="fab fa-linkedin-in"></i><div class="sldiv">#ProtectBabyTurtles</div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="footer-bottom">
+                <p class="footer-bottomp">© Copyright . 2023 . Privacy Policy . Sri Lanka<br>Developed by,  Nisal Ulluvisheva</p>
+            </div>
+     
+       </footer>
+    </section>
+
+    <a href="#nav"><button class="gototopbtn">/\</button></a>
+    
+    <script src="./tickets.js"></script>
+</body>
+</html>

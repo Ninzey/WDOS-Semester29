@@ -1,0 +1,636 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/*Background image*/
+
+.backimg{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(./c3192fdc0a9fd9f35d296b650a76ea16.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 370vh;
+}
+
+/*Navigation Bar*/
+
+nav{
+    background: rgb(0,0,0,0.4);
+    height: 60px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;    
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a:hover{
+    color: #8e8e8e;
+    transition: .5s;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    max-width: 250px;
+    border-top: 3px solid rgb(109, 109, 109);
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 300px;
+    float: none;
+    display: list-item;
+}
+
+nav ul ul li a{
+    line-height: 50px;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+}
+
+/*calendar*/
+
+.calendar{
+    background-color: #5f5f5f;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 43%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*calendar label*/
+
+.date{
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    font-size: 30px;
+    color: #bdbdbd;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+}
+
+/*Number of Guests*/
+
+/*label*/
+
+.guestsnum{
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    font-size: 30px;
+    color: #bdbdbd;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+}
+
+.guestssec{
+    position: relative;
+    width: 100%;
+    top: 11.5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box{
+    background: #5f5f5f;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.box label{
+    margin-right: 18px;
+    color: white;
+    font-size: 17px;
+}
+
+.box .button{
+    width: 37px;
+    height: 37px;
+    border: 1px solid #c6c6c6;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.box.button:active{
+    background: #ccc;
+}
+
+.box input{
+    width: 60px;
+    padding: 5px 10px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+/*Select the time duration*/
+
+/*label*/
+
+.timelabel{
+    position: absolute;
+    top: 143%;
+    left: 25%;
+    font-size: 30px;
+    color: #bdbdbd;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+}
+
+.timebody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 310px;
+}
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+}
+
+.select-box{
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 320px;
+    color: white;
+    background-color: #5f5f5f;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/*Price table*/
+
+/*label*/
+
+.pricetbl{
+    position: absolute;
+    top: 170%;
+    left: 25%;
+    font-size: 30px;
+    color: #bdbdbd;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+}
+
+.table1{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 180%;
+    width: 100%;
+    border-spacing: 5;
+}
+
+.td1{
+    padding: 15px 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #acacac;
+    font-size: 20px;
+}
+
+.tr1{
+    font-family: sans-serif;
+}
+
+.td2{
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #535353;
+    color: white;
+    font-size: 20px;
+}
+
+/*Summary table*/
+
+/*label*/
+
+.sumrytbl{
+    position: relative;
+    top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #bdbdbd;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+}
+
+.table2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 700px;
+    width: 100%;
+    border-spacing: 5;
+}
+
+.td12{
+    padding: 15px 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #acacac;
+    font-size: 20px;
+}
+
+.tr2{
+    font-family: sans-serif;
+}
+
+.td22{
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #535353;
+    color: white;
+    font-size: 20px;
+}
+
+/*Continue with purchase Button*/
+
+.exbut{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    left: 42%;
+    margin-top: 50px;
+    border-radius: 50px;
+    font-size: 18px;
+    border: 3px solid #656565;
+    background: transparent;
+    cursor: pointer;
+    color: rgba(185,185,185);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.exbut:hover{
+    background-color: #656565;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+/*Footer*/
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #121212;
+    padding: 50px 0;
+}
+
+.footer-col{
+   width: 22%;
+   padding: 0 15px;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #464444;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+    line-height: 30px;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	display: block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin: 10px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+.sldiv{
+	margin-left: 60px;
+	margin-top: -40px;
+}
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer-col .sldiv:hover{
+	color: rgb(164, 164, 164);
+}
+
+.footer-bottom{
+    
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer-bottomp{
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: -100px; 
+}
+
+.footerp{
+	width: 230px;
+	color: #bbbbbb;
+	line-height: 23px;
+    word-spacing: 2px;
+}
+
+/*Go To Top Button*/
+
+.gototopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(168, 168, 168);
+    top: 620px;
+    right: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.gototopbtn:hover{
+    background-color: #ffffff;
+}
+
+.gototopbtn::before,
+.gototopbtn::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid #fefefe;
+    position: absolute;
+    left: 0px;
+    margin-top: -2px;
+    margin-left: -2px;
+    box-sizing: border-box; 
+    animation: waves 2s linear infinite;
+}
+
+.gototopbtn::after{
+    animation-delay: 1s;
+}
+
+.gototopbtn::before,
+.gototopbtn::after{
+    border-color: rgb(255, 255, 255);
+}
+
+@keyframes waves{
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .guestssec{
+        top: 9.5%;
+    }
+    .timebody{
+        margin-top: 250px;
+    }
+
+}
+
+@media screen and (max-width: 858px) {
+ul{
+    width: 100%;
+    top: 80px;
+    left: 0;
+    text-align: center;
+}
+nav ul li{
+    display:block;
+}
+nav ul li a{
+    font-size: 20px;
+    background-color: none;
+    color: white;
+}
+/*Go To Top Btn*/
+
+.gototopbtn{
+    display: none;
+}
+
+/*Footer*/
+
+.footer-col{
+    width: 60%;
+}
+
+/*Background image*/
+
+.backimg{
+
+    height: 400vh;
+}
+
+/*calendar*/
+
+.calendar{
+    top: 80%;
+}
+
+/*calendar label*/
+
+.date{
+    top: 60%;
+    left: 25%;
+}
+
+
+/*Number of Guests*/
+
+/*label*/
+
+.guestsnum{
+    top: 90%;
+}
+
+.guestssec{
+    top: 8%;
+}
+
+/*Select the time duration*/
+
+/*label*/
+
+.timelabel{
+    top: 174%;
+}
+
+.timebody{
+    margin-top: 400px;
+}
+
+/*Price table*/
+
+/*label*/
+
+.pricetbl{
+    top: 200%;
+}
+
+.table1{
+    top: 205%;
+}
+
+/*Summary table*/
+
+/*label*/
+
+.sumrytbl{
+    top: 30%;
+}
+
+.table2{
+    margin-top: 1100px;
+}
+
+/*Continue with purchase Button*/
+
+.exbut{
+    margin-left: -25%;
+}
+}
